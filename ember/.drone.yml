@@ -39,7 +39,6 @@ steps:
 trigger:
   event:
     - pull_request
-
 ---
 kind: pipeline
 type: docker
