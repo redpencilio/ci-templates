@@ -33,7 +33,7 @@ steps:
 - name: build-dry-run
   image: plugins/docker
   settings:
-    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME%-service}
+    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME}
     dry_run: true
     purge: true
 trigger:
@@ -47,7 +47,7 @@ steps:
 - name: push-latest-build
   image: plugins/docker
   settings:
-    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME%-service}
+    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME}
     username:
       from_secret: docker_username
     password:
@@ -67,7 +67,7 @@ steps:
 - name: push-tagged-build
   image: plugins/docker
   settings:
-    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME%-service}
+    repo: ${DRONE_REPO_NAMESPACE/redpencilio/redpencil}/${DRONE_REPO_NAME}
     tags: ${DRONE_TAG##v}
     username:
       from_secret: docker_username
