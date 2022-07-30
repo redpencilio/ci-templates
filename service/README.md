@@ -11,3 +11,6 @@ The pipeline uses the [docker plugin](http://plugins.drone.io/drone-plugins/dron
 1. hardcode the correct repository in every pipeline
 2. use drone's [string operations](https://docs.drone.io/pipeline/environment/substitution/) to modify the parameter
 
+This pipeline will alter the name of the service to strip -service in the docker hub build.  The -service postfix used on the Git forge is not relevant in the stack where each microservice is a service.  Do remove this stripping for existing services.
+
+This pipeline will also rename the organization on the Git forge if it's redpencilio and change it to redpencil.  This is matching to our usernames on both GitHub and Docker Hub.
