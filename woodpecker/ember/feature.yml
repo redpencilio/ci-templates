@@ -1,4 +1,4 @@
-teps:
+steps:
   build-feature:
     image: woodpeckerci/plugin-docker-buildx
     settings:
