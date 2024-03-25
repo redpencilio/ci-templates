@@ -7,21 +7,20 @@ steps:
     image: danlynn/ember-cli:4.12.1
     group: lint
     commands:
-      - npm run lint:js --workspaces --if-present
+      - npm run lint:js
   lint-hbs:
     image: danlynn/ember-cli:4.12.1
     group: lint
     commands:
-      - npm run lint:hbs --workspaces --if-present
-  dependency-lint:
+      - npm run lint:hbs
+  lint-css:
     image: danlynn/ember-cli:4.12.1
     group: lint
     commands:
-      - ember dependency-lint
+      - npm run lint:hbs
   test:
     image: danlynn/ember-cli:4.12.1
     commands:
       - npm run test:ember
-    failure: ignore
 when:
   event: pull_request
