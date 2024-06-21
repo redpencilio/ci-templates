@@ -5,6 +5,7 @@ steps:
       repo: "${CI_REPO_OWNER}/${CI_REPO_NAME}"
       tags: latest
       platforms: linux/amd64, linux/arm64
+      purge: true
     secrets: [ docker_username, docker_password ]
 when:
   branch: master

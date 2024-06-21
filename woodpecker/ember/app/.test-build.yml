@@ -4,6 +4,7 @@ steps:
     settings:
       repo: ${CI_REPO}
       dry_run: true
+      purge: true
 when:
   event:
     - pull_request
