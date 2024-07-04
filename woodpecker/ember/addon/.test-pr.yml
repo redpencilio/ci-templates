@@ -17,7 +17,7 @@ steps:
     image: danlynn/ember-cli:4.12.1
     group: lint
     commands:
-      - npm run lint:hbs
+      - npm run lint:css
   test:
     image: danlynn/ember-cli:4.12.1
     commands:
