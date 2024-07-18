@@ -10,4 +10,4 @@ steps:
         from_secret: npm_access_token
 when:
   event: tag
-  tag: v*
+  ref: refs/tags/v*
