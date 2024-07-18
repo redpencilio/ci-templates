@@ -8,4 +8,4 @@ steps:
     secrets: [ docker_username, docker_password ]
 when:
   event: tag
-  tag: v*
+  ref: refs/tags/v*
